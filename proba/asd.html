@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Algoritmus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-left: 3px solid #333;
+            overflow-x: auto;
+        }
+        .image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bubble Sort Rendezési Algoritmus</h1>
+        </div>
+    </header>
+    
+    <div class="container content">
+        <section>
+            <h2>Algoritmus Leírása</h2>
+            <p>A Bubble Sort egy egyszerű rendezési algoritmus, amely a legnagyobb (vagy legkisebb) elemet "buborékoltatja" a sorozat végére (vagy elejére). Az algoritmus többször végigiterál a listán, és minden iterációban összehasonlítja az egymás melletti elemeket, és szükség esetén cseréli őket. Ez addig folytatódik, amíg az egész lista rendezetté nem válik.</p>
+        </section>
+        
+        <section>
+            <h2>Hatékonyság és Tárigény</h2>
+            <p><strong>Időbeli hatékonyság:</strong> A Bubble Sort algoritmus legrosszabb és átlagos időbeli hatékonysága O(n<sup>2</sup>), ahol n a lista elemszáma. A legjobb esetben, ha a lista már rendezett, az algoritmus O(n) időbeli hatékonysággal rendelkezik.</p>
+            <p><strong>Tárigény:</strong> Az algoritmus helyigénye O(1), mivel csak egy néhány segédváltozóra van szükség.</p>
+        </section>
+        
+        <section>
+            <h2>Kód Példa</h2>
+            <p>Az alábbi példa a Bubble Sort algoritmust mutatja be Python nyelven:</p>
+            <pre>
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+            </pre>
+        </section>
+        
+        <section>
+            <h2>Szemléltető Ábra</h2>
+            <div class="image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Bubble_sort_animation.gif" alt="Bubble Sort Ábra">
+            </div>
+        </section>
+        
+        <section>
+            <h2>Források</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia - Bubble Sort</a></li>
+                <li><a href="https://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks - Bubble Sort</a></li>
+                <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm">TutorialsPoint - Bubble Sort</a></li>
+                <li><a href="https://www.programiz.com/dsa/bubble-sort">Programiz - Bubble Sort</a></li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Algoritmusok Bemutatása</p>
+    </footer>
+</body>
+</html>
